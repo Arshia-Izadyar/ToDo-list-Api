@@ -9,10 +9,6 @@ class UserSerializer(serializers.ModelSerializer):
 
 class TaskSerializer(serializers.ModelSerializer):
     user = UserSerializer(read_only=True)
-<<<<<<< HEAD
-=======
-    
->>>>>>> 8e4605f5ae9210212a54960fa0533529fb915212
 
     class Meta:
         model = TaskModel
