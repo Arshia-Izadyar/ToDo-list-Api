@@ -21,8 +21,5 @@ class TaskSerializer(serializers.ModelSerializer):
         
         if not request.parser_context['kwargs']:
             rep.pop('description')
-        
         return rep
     
-    def get_snippet(self, instance):
-        return instance[:30]

@@ -2,7 +2,6 @@ from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIV
 from rest_framework.permissions import IsAuthenticated
 from todo_list.models import TaskModel
 from .serializer import TaskSerializer
-from rest_framework.response import Response
 
 class TaskListAPIView(ListCreateAPIView):
     model = TaskModel
