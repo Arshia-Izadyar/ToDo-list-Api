@@ -9,7 +9,7 @@ class UserSerializer(serializers.ModelSerializer):
 
 class TaskSerializer(serializers.ModelSerializer):
     user = UserSerializer(read_only=True)
-    description = 
+    
 
     class Meta:
         model = TaskModel
