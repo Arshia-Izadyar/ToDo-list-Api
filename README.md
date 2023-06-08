@@ -14,3 +14,9 @@ You can retrieve tasks individually or in lists, customize your view, and mark t
 With user authentication for data privacy, error handling for smooth operation, and seamless integration with front-end applications, the Todo List API is the perfect tool to keep you organized and on top of your tasks. 
 
 Stay productive and never miss a beat with this powerful backend solution!
+
+
+you can only see your list not ayone else:
+/todo-list/api/task-list/
+
+you can edit, delete, see detail of your Task like description in: /todo-list/api/task-list/
