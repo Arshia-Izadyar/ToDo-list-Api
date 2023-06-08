@@ -9,12 +9,11 @@ class UserSerializer(serializers.ModelSerializer):
 
 class TaskSerializer(serializers.ModelSerializer):
     user = UserSerializer(read_only=True)
-    description = 
 
     class Meta:
         model = TaskModel
-        fields = ('id', 'user','title', 'description', 'is_complete', 'tags','dead_line',)
-        read_only_fields = ('id', 'tags')
+        fields = ('id','user','title', 'description', 'is_complete', 'tags','dead_line','tags')
+        read_only_fields = ('id', 'user')
 
     def to_representation(self, instance):
         request = self.context.get('request')

@@ -2,6 +2,7 @@ from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIV
 from rest_framework.permissions import IsAuthenticated
 from todo_list.models import TaskModel
 from .serializer import TaskSerializer
+from rest_framework.response import Response
 
 class TaskListAPIView(ListCreateAPIView):
     model = TaskModel
@@ -13,6 +14,11 @@ class TaskListAPIView(ListCreateAPIView):
         qs = super().get_queryset()
         return qs.filter(user=self.request.user)
     
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
+        return super().perform_create(serializer)
+
+    
 class TaskRetrieve(RetrieveUpdateDestroyAPIView):
     model = TaskModel
     queryset = TaskModel.objects
@@ -22,8 +28,3 @@ class TaskRetrieve(RetrieveUpdateDestroyAPIView):
     def get_queryset(self):
         qs = super().get_queryset()
         return qs.filter(user=self.request.user)
-    
-    def get_object(self):
-        obj = super().get_object()
-        obj.user = self.request.user
-        return obj
