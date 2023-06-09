@@ -15,11 +15,11 @@ class TaskSerializer(serializers.ModelSerializer):
         fields = ('id','user','title', 'description', 'is_complete', 'tags','dead_line','tags')
         read_only_fields = ('id', 'user')
 
-    def to_representation(self, instance):
-        request = self.context.get('request')
-        rep = super().to_representation(instance)
+    # def to_representation(self, instance):
+    #     request = self.context.get('request')
+    #     rep = super().to_representation(instance)
         
-        if not request.parser_context['kwargs']:
-            rep.pop('description')
-        return rep
+    #     if not request.parser_context['kwargs']:
+    #         rep.pop('description')
+    #     return rep
     
