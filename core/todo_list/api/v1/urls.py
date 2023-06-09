@@ -1,6 +1,6 @@
-from django.urls import path, include
-from .views import TaskListAPIView, TaskRetrieve, TaskView
-from rest_framework.routers import DefaultRouter
+from django.urls import path
+from .views import TaskView
+# from rest_framework.routers import DefaultRouter
 
 
 
