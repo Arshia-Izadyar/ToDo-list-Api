@@ -1,15 +1,15 @@
 # ToDo-list-Api
 
-creatin a Todo list to show i can do CRUD with Rest Api
+Creating a Todo list to show i can do CRUD with Rest Api
 
-what's the point? no one cares!
+What's the point? no one cares!
 
 
 ## user login 🔐
 
-user login / reset password / user logout / user signin and email confirm all avalible
+User login / reset password / user logout / user signin and email confirm all avalible
 
-used allauth for user handeling in api
+Used allauth for user handeling in api
 
 ## Todo List 📃
 
@@ -19,7 +19,9 @@ Create, update, and delete tasks with ease, and organize them based on due dates
 
 You can retrieve tasks individually or in lists, customize your view, and mark tasks as completed.
 
-every user can only see only their task
+Every user can only see only their task
+
+You can filter with tags or is_complete or search the name
 
 ## swagger shema 😎
 
