@@ -9,14 +9,17 @@ task_list = TaskView.as_view({
     'post': "create"
 })
 
+
 task_retrieve = TaskView.as_view({
     'get': "retrieve",
     'put': "update",
     "delete": "destroy"
 })
 
+
 # router = DefaultRouter()
 # router.register('list', TaskView,basename="snippet")
+
 
 urlpatterns = [
     path('task-list/', task_list, name='task-list'),

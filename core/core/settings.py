@@ -23,8 +23,17 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'todo_list.apps.TodoListConfig',
     'rest_framework',
+    'rest_framework.authtoken',
+    'rest_auth',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'rest_auth.registration',
+    'drf_yasg',
+    
 ]
 
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -98,3 +107,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 
+REST_USE_JWT = True
