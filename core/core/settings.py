@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'allauth.account',
     'rest_auth.registration',
     'drf_yasg',
+    'django_filters',
     
 ]
 
