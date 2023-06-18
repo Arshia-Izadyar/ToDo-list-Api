@@ -6,7 +6,6 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = [
@@ -15,15 +14,46 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='TaskModel',
+            name="TaskModel",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('title', models.CharField(max_length=35)),
-                ('is_complete', models.BooleanField(default=False)),
-                ('dead_line', models.DateField()),
-                ('description', models.TextField(blank=True, null=True)),
-                ('tags', models.PositiveSmallIntegerField(choices=[(1, 'Work'), (2, 'School'), (3, 'Personal'), (4, 'urgent'), (5, 'travel'), (6, 'social'), (7, 'Family'), (8, 'deadlines'), (9, 'goals')], default=1)),
-                ('user', models.ForeignKey(on_delete=django.db.models.deletion.PROTECT, related_name='Tasks', to=settings.AUTH_USER_MODEL)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("title", models.CharField(max_length=35)),
+                ("is_complete", models.BooleanField(default=False)),
+                ("dead_line", models.DateField()),
+                ("description", models.TextField(blank=True, null=True)),
+                (
+                    "tags",
+                    models.PositiveSmallIntegerField(
+                        choices=[
+                            (1, "Work"),
+                            (2, "School"),
+                            (3, "Personal"),
+                            (4, "urgent"),
+                            (5, "travel"),
+                            (6, "social"),
+                            (7, "Family"),
+                            (8, "deadlines"),
+                            (9, "goals"),
+                        ],
+                        default=1,
+                    ),
+                ),
+                (
+                    "user",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.PROTECT,
+                        related_name="Tasks",
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
             ],
         ),
     ]

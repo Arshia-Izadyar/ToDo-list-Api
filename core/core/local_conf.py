@@ -1,4 +1,4 @@
-KEY = 'django-insecure-_i22!s5*5_t52h#oukfs_x03_worz03)ji7xe*1*$03kbexilz'
+KEY = "django-insecure-_i22!s5*5_t52h#oukfs_x03_worz03)ji7xe*1*$03kbexilz"
 
 DATABASE = {
     "default": {

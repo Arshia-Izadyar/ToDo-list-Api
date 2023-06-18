@@ -1,7 +1,7 @@
 from django.urls import path
 from .views import TaskView, TaskListAPIView
-# from rest_framework.routers import DefaultRouter
 
+# from rest_framework.routers import DefaultRouter
 
 
 # task_list = TaskView.as_view({
@@ -10,11 +10,9 @@ from .views import TaskView, TaskListAPIView
 # })
 
 
-task_retrieve = TaskView.as_view({
-    'get': "retrieve",
-    'put': "update",
-    "delete": "destroy"
-})
+task_retrieve = TaskView.as_view(
+    {"get": "retrieve", "put": "update", "delete": "destroy"}
+)
 
 
 # router = DefaultRouter()
@@ -22,9 +20,8 @@ task_retrieve = TaskView.as_view({
 
 
 urlpatterns = [
-    path('task-list/', TaskListAPIView.as_view(), name='task-list'),
-    path('task-detail/<int:pk>/', task_retrieve, name='task-detail'),
-    
+    path("task-list/", TaskListAPIView.as_view(), name="task-list"),
+    path("task-detail/<int:pk>/", task_retrieve, name="task-detail"),
     # path('task-detail/<int:pk>/', TaskRetrieve.as_view(), name='task-detail'),
     # path('', include(router.urls)),
 ]
