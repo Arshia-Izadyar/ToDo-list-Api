@@ -10,9 +10,7 @@ from .views import TaskView, TaskListAPIView
 # })
 
 
-task_retrieve = TaskView.as_view(
-    {"get": "retrieve", "put": "update", "delete": "destroy"}
-)
+task_retrieve = TaskView.as_view({"get": "retrieve", "put": "update", "delete": "destroy"})
 
 
 # router = DefaultRouter()
